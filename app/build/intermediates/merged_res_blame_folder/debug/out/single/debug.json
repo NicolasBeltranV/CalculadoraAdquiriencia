@@ -72,6 +72,10 @@
         "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main2.xml.flat",
+        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\layout\\activity_main2.xml"
+    },
+    {
         "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },

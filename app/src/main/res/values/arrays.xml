@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string-array name="SpinGraIva">
+        <item>@string/Si</item>
+        <item>@string/No</item>
+    </string-array>
+
+    <string-array name="spinCard">
+        <item>@string/cred</item>
+        <item>@string/deb</item>
+    </string-array>
+    
+    <string-array name="SpinContr">
+        <item>@string/itemOne</item>
+        <item>@string/itemTwo</item>
+        <item>@string/itemThree</item>
+        <item>@string/itemFour</item>
+        <item>@string/itemFive</item>
+        <item>@string/itemSix</item>
+    </string-array>
+
+</resources>

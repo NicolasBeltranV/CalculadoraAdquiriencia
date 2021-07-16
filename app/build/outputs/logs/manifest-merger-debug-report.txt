@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-21:12
+ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-22:12
 MERGED from [androidx.core:core-ktx:1.3.1] C:\Users\Administrador\.gradle\caches\transforms-2\files-2.1\d27e8335d6c4ebacf0b2f340d3543550\core-ktx-1.3.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\Administrador\.gradle\caches\transforms-2\files-2.1\0b1c85e470567ba146a4ab0add494570\material-1.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Administrador\.gradle\caches\transforms-2\files-2.1\baddf408c743cd7daaeac570b2a22248\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
@@ -33,25 +33,25 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Administrador
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Administrador\.gradle\caches\transforms-2\files-2.1\d3d8c18a79b67d645bddfdd6fffb8703\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Administrador\.gradle\caches\transforms-2\files-2.1\f9e8569deeaf180b86f7562a710bfef1\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Administrador\.gradle\caches\transforms-2\files-2.1\edd8358959bcd574f4215fe1eabadd66\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-21:12
-INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-22:12
 	package
 		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:3:5-43
 		INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-21:12
+		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-22:12
 		INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-21:12
+		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:1-22:12
 		INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:5:5-19:19
+ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:5:5-20:19
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\Administrador\.gradle\caches\transforms-2\files-2.1\0b1c85e470567ba146a4ab0add494570\material-1.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\Administrador\.gradle\caches\transforms-2\files-2.1\0b1c85e470567ba146a4ab0add494570\material-1.2.1\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Administrador\.gradle\caches\transforms-2\files-2.1\baddf408c743cd7daaeac570b2a22248\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
@@ -74,20 +74,24 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ad
 		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:11:9-54
+activity#com.example.secondaplication.MainActivity2
+ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:12:9-60
+	android:name
+		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:12:19-48
 activity#com.example.secondaplication.MainActivity
-ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:13:9-19:20
 	android:name
-		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:12:19-47
+		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:13:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:13:13-17:29
+ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:14:13-18:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:14:17-69
+ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:15:17-69
 	android:name
-		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:14:25-66
+		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:15:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:16:17-77
+ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:17:17-77
 	android:name
-		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:16:27-74
+		ADDED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:17:27-74
 uses-sdk
 INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml

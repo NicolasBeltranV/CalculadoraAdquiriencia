@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#23B0E8"
-    android:textAlignment="center"
-    tools:background="#23B0E8">
+    tools:context=".MainActivity2">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline39"
@@ -475,6 +473,4 @@
         app:layout_constraintStart_toStartOf="@+id/guideline43"
         app:layout_constraintTop_toTopOf="@+id/guideline37" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-

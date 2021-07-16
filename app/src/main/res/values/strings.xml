@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">secondAplication</string>
+    <string name="app_name">Calculadora</string>
+    <string name="title">CALCULADORA ADQUIRIENCIA</string>
+    <string name="txtVenta">VENTA</string>
+    <string name="txtSubTotal">SubTotal</string>
+    <string name="inpSubTotal"></string>
+    <string name="txtGraIva">¿graba iva?</string>
+    <string name="Si">Si</string>
+    <string name="No">No</string>
+    <string name="txtTotal">Total</string>
+    <string name="txtComi">COMISIÓN</string>
+    <string name="txtCard">Tarjeta</string>
+    <string name="cred">Credito(4.5%)</string>
+    <string name="deb">Debito(2.24%)</string>
+    <string name="txtIva">IVA</string>
+    <string name="txtRetenc">RETENCIONES</string>
+    <string name="txtContr">Contribuyente</string>
+    <string name="itemOne">Contribuyentes Rise</string>
+    <string name="itemTwo">Arte calificado por la Junta</string>
+    <string name="itemThree">Especial Bienes</string>
+    <string name="itemFour">Especial Servicios</string>
+    <string name="itemFive">No especial Bienes</string>
+    <string name="itemSix">No especial Servicios</string>
+    <string name="txtImpRent">Impuesto a la renta</string>
+    <string name="IVA">IVA</string>
+    <string name="Message">Recibira en tu cuenta:</string>
+
+
 </resources>

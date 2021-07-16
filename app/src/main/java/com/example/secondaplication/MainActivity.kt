@@ -1,44 +1,19 @@
 package com.example.secondaplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.formulario)
-        enumClass()
-    }
-    enum class Direction(){
-        NORTH, SOUTH, ESTH, WESTH;
+        setContentView(R.layout.activity_main)
+        val boton = findViewById<Button>(R.id.btnGo)
+        boton.setOnClickListener{val intent = Intent(this,MainActivity2::class.java)
+            startActivity(intent)}
 
-        fun description():String{
-
-            return when (this){
-                NORTH->{
-                    "La direccion es Norte"
-                }
-                SOUTH->{
-                    "La direccion es Sur"
-                }
-                ESTH->{
-                    "La direccion es Este"
-                }
-                WESTH->{
-                    "La direccion es Oeste"
-                }
-            }
-        }
-    }
-
-    fun enumClass(){
-
-        var userDirection: Direction? = null
-        println("La direccion es: ${userDirection}")
-
-        userDirection = Direction.ESTH
-        println("La direccion es $userDirection")
-
-        println(userDirection.description())
+        
     }
 }
