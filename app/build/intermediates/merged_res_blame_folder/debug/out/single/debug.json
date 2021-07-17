@@ -8,24 +8,12 @@
         "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_formulario.xml.flat",
         "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\layout\\formulario.xml"
     },
     {
         "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\font_gothic.TTF.flat",
         "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\font\\gothic.TTF"
-    },
-    {
-        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\font_gothicbi.TTF.flat",
@@ -36,59 +24,55 @@
         "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\font\\gothicb.TTF"
     },
     {
-        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_logo.jpg.flat",
+        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xhdpi\\logo.jpg"
     },
     {
-        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_logon.png.flat",
+        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xhdpi\\logon.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\font_gothici.TTF.flat",
         "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\font\\gothici.TTF"
     },
     {
-        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main2.xml.flat",
         "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\layout\\activity_main2.xml"
     },
     {
-        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_logo.jpg.flat",
-        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xxxhdpi\\logo.jpg"
-    },
-    {
-        "merged": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_logon.jpg.flat",
-        "source": "C:\\Users\\Administrador\\AndroidStudioProjects\\secondAplication\\app\\src\\main\\res\\mipmap-xxxhdpi\\logon.jpg"
     }
 ]

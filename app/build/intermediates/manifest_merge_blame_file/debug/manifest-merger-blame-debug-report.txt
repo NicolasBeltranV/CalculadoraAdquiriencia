@@ -11,7 +11,7 @@
 9-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:5:5-20:19
+11-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:5:5-25:19
 12        android:allowBackup="true"
 12-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -28,23 +28,34 @@
 19        android:testOnly="true"
 20        android:theme="@style/Theme.SecondAplication" >
 20-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:11:9-54
-21        <activity android:name="com.example.secondaplication.MainActivity2" />
+21        <activity android:name="com.example.secondaplication.MainActivity4" />
 21-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:12:9-60
 21-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:12:19-48
-22        <activity android:name="com.example.secondaplication.MainActivity" >
-22-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:13:9-19:20
-22-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:13:19-47
-23            <intent-filter>
-23-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:14:13-18:29
-24                <action android:name="android.intent.action.MAIN" />
-24-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:15:17-69
-24-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:15:25-66
-25
-26                <category android:name="android.intent.category.LAUNCHER" />
-26-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:17:17-77
-26-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:17:27-74
-27            </intent-filter>
-28        </activity>
-29    </application>
+22        <activity
+22-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:13:9-16:73
+23            android:name="com.example.secondaplication.MainActivity3"
+23-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:14:13-42
+24            android:label="@string/title_activity_main3"
+24-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:15:13-57
+25            android:theme="@style/Theme.SecondAplication.NoActionBar" />
+25-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:16:13-70
+26        <activity android:name="com.example.secondaplication.MainActivity2" />
+26-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:17:9-51
+26-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:17:19-48
+27        <activity android:name="com.example.secondaplication.MainActivity" >
+27-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:18:9-24:20
+27-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:18:19-47
+28            <intent-filter>
+28-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:19:13-23:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:20:17-69
+29-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:20:25-66
 30
-31</manifest>
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:22:17-77
+31-->C:\Users\Administrador\AndroidStudioProjects\secondAplication\app\src\main\AndroidManifest.xml:22:27-74
+32            </intent-filter>
+33        </activity>
+34    </application>
+35
+36</manifest>

@@ -18,6 +18,11 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.SecondAplication" >
+        <activity android:name="com.example.secondaplication.MainActivity4" />
+        <activity
+            android:name="com.example.secondaplication.MainActivity3"
+            android:label="@string/title_activity_main3"
+            android:theme="@style/Theme.SecondAplication.NoActionBar" />
         <activity android:name="com.example.secondaplication.MainActivity2" />
         <activity android:name="com.example.secondaplication.MainActivity" >
             <intent-filter>

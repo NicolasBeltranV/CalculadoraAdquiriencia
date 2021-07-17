@@ -2,6 +2,8 @@ package com.example.secondaplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.Spinner
 import androidx.core.widget.addTextChangedListener
@@ -11,21 +13,38 @@ class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-        var txteditSubTotal: EditText = findViewById(R.id.editSubtotal)
+
+        var txteditSubTotal = findViewById<EditText>(R.id.inpSubTotal)
+
+
         var feedbacktype = findViewById<Spinner>(R.id.spinnerId)
-        var feedbacktypeCont = findViewById<Spinner>(R.id.spinContr)
-        var txttotal : EditText = findViewById(R.id.inpTotal)
-        var txtiva : EditText = findViewById(R.id.inpIva)
-        var txttotal2 : EditText = findViewById(R.id.inpTotalTwo)
-        var edittotal: String = txttotal.text.toString()
-        var edittotal2: String = txttotal2.text.toString()
-        var editiva: String = txtiva.text.toString()
-        var editSubtotal: String = txteditSubTotal.text.toString()
         var spinnerOptions = feedbacktype.getSelectedItem().toString()
+
+        var feedbacktypeCont = findViewById<Spinner>(R.id.spinContr)
         var spinnerOptionsCont = feedbacktypeCont.getSelectedItem().toString()
 
-      txteditSubTotal.addTextChangedListener(){
+        var txttotal = findViewById<EditText>(R.id.inpTotal)
 
-      }
+
+        var txtiva = findViewById<EditText>(R.id.inpIva)
+
+
+        var txttotal2 = findViewById<EditText>(R.id.inpTotalTwo)
+
+
+        txteditSubTotal.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                txttotal.setText(s.toString())
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+
+        })
     }
 }

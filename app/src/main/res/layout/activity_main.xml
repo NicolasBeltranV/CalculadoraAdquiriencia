@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00B3E0"
-    android:backgroundTint="#23B0E8"
+    android:backgroundTint="#00A3E0"
     android:fontFamily="@font/gothic"
     tools:context=".MainActivity">
 
@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.20519836" />
+        app:layout_constraintGuide_percent="0.3" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -36,60 +36,66 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.7" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_end="0dp" />
 
-    <Button
-        android:id="@+id/btnGo"
-        android:layout_width="247dp"
-        android:layout_height="124dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="169dp"
-        android:backgroundTint="#23B0E8"
-        android:fontFamily="@font/gothic"
-        android:text="Continuar"
-        android:textColor="#1D428A"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="250dp"
-        android:layout_height="377dp"
-        android:layout_marginTop="176dp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="@id/guideline3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/logo" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="250dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:fontFamily="@font/gothic"
-        android:text="CALCULADORA ADQUIRIENCIA"
+        android:text="Calculadora Adquiriencia"
         android:textAlignment="center"
-        android:textColor="#1D428A"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:srcCompat="@mipmap/logo" />
+
+    <Button
+        android:id="@+id/btnGo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#00A3E0"
+        android:fontFamily="@font/gothic"
+        android:text="Continuar"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/guideline3"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:textSize="24sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

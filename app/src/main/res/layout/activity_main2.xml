@@ -414,7 +414,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline25"
         app:layout_constraintStart_toStartOf="@+id/guideline23"
         app:layout_constraintTop_toTopOf="@+id/guideline26"
-        app:srcCompat="@mipmap/logo" />
+        app:srcCompat="@mipmap/logon" />
 
     <Spinner
         android:id="@+id/spinnerId"
