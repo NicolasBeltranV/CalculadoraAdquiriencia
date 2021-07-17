@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Spinner
+import androidx.core.widget.addTextChangedListener
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -23,6 +24,8 @@ class MainActivity2 : AppCompatActivity() {
         var spinnerOptions = feedbacktype.getSelectedItem().toString()
         var spinnerOptionsCont = feedbacktypeCont.getSelectedItem().toString()
 
-      
+      txteditSubTotal.addTextChangedListener(){
+
+      }
     }
 }
