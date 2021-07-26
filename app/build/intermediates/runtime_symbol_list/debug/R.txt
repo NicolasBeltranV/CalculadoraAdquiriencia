@@ -2185,6 +2185,7 @@ int mipmap ic_launcher_foreground 0x7f0e0001
 int mipmap ic_launcher_round 0x7f0e0002
 int mipmap logo 0x7f0e0003
 int mipmap logon 0x7f0e0004
+int mipmap logotwo 0x7f0e0005
 int navigation nav_graph 0x7f0f0000
 int plurals mtrl_badge_content_description 0x7f100000
 int string IVA 0x7f110000

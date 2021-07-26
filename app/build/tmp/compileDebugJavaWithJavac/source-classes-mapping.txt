@@ -1,7 +1,7 @@
-com/example/secondaplication/databinding/FormularioBinding.java
- com.example.secondaplication.databinding.FormularioBinding
 com/example/secondaplication/BuildConfig.java
  com.example.secondaplication.BuildConfig
+com/example/secondaplication/databinding/FormularioBinding.java
+ com.example.secondaplication.databinding.FormularioBinding
 com/example/secondaplication/databinding/ActivityMain2Binding.java
  com.example.secondaplication.databinding.ActivityMain2Binding
 com/example/secondaplication/databinding/ActivityMainBinding.java

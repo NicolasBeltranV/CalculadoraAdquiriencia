@@ -2186,6 +2186,7 @@ mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 mipmap logo
 mipmap logon
+mipmap logotwo
 navigation nav_graph
 plurals mtrl_badge_content_description
 string IVA

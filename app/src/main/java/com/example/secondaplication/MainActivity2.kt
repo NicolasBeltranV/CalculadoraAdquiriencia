@@ -22,6 +22,8 @@ class MainActivity2 : AppCompatActivity() {
         var valueSubtotal = 0;
         var valueIva = 0;
         var operation = 0;
+        var resultComi=0.0;
+
 
         val feedbacktype = findViewById<Spinner>(R.id.spinnerId)
         val spinnerOptions = feedbacktype.getSelectedItem().toString()
@@ -114,6 +116,32 @@ class MainActivity2 : AppCompatActivity() {
             }
 
         })
+        commision.setOnItemSelectedListener(object : OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                when(position){
+                    0 -> {
+                        var itemOne = GetPorcentageDec(valueSubtotal.toString().toInt(),4.5.toDouble())
+                        resultComi = valueSubtotal-itemOne
+                        txttotal2.setText(resultComi.toString())
+                    }
+                    1 -> {
+                        var itemTwo = GetPorcentageDec(valueSubtotal.toString().toInt(),2.25.toDouble())
+                        resultComi= valueSubtotal-itemTwo
+                        txttotal2.setText(resultComi.toString())
+                    }
+
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+
+        })
 
         feedbacktypeCont.setOnItemSelectedListener(object : OnItemSelectedListener {
             override fun onItemSelected(
@@ -130,22 +158,37 @@ class MainActivity2 : AppCompatActivity() {
                     1 -> {
                         imprent.setText("2%")
                         impiva.setText("0%")
+                        var x = GetPorcentage(valueSubtotal,2)
+                        var y = resultComi-x
+                        txttotal2.setText(y.toString())
                     }
                     2 -> {
                         imprent.setText("2%")
                         impiva.setText("10%")
+                        var x = GetPorcentage(valueSubtotal,2)
+                        var y = resultComi-x
+                        txttotal2.setText(y.toString())
                     }
                     3 -> {
                         imprent.setText("2%")
                         impiva.setText("20%")
+                        var x = GetPorcentage(valueSubtotal,2)
+                        var y = resultComi-x
+                        txttotal2.setText(y.toString())
                     }
                     4 -> {
                         imprent.setText("2%")
                         impiva.setText("30%")
+                        var x = GetPorcentage(valueSubtotal,2)
+                        var y = resultComi-x
+                        txttotal2.setText(y.toString())
                     }
                     5 -> {
                         imprent.setText("2%")
                         impiva.setText("70%")
+                        var x = GetPorcentage(valueSubtotal,2)
+                        var y = resultComi-x
+                        txttotal2.setText(y.toString())
                     }
 
                 }
@@ -167,12 +210,20 @@ class MainActivity2 : AppCompatActivity() {
         }
     }
 
-    fun GetPorcentage(firstNumber: Int, secondNumber: Int):Int
+    fun GetPorcentage(firstNumber: Int, secondNumber:Int):Int
     {
         try {
             return (firstNumber * secondNumber / 100)
         } catch (e: Exception) {
             return 0;
+        }
+    }
+    fun GetPorcentageDec(firstNumber: Int, secondNumber:Double):Double
+    {
+        try {
+            return (firstNumber * secondNumber / 100)
+        } catch (e: Exception) {
+            return 0.0;
         }
     }
 }
