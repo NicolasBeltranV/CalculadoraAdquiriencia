@@ -16,9 +16,12 @@ class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-
+        var boolIva = false
         val txteditSubTotal = findViewById<EditText>(R.id.inpSubTotal)
-        val subtotal = txteditSubTotal.text.toString()
+        var subTotal = ConvertToInt(txteditSubTotal.toString());
+        var valueSubtotal = 0;
+        var valueIva = 0;
+        var operation = 0;
 
         val feedbacktype = findViewById<Spinner>(R.id.spinnerId)
         val spinnerOptions = feedbacktype.getSelectedItem().toString()
@@ -45,12 +48,6 @@ class MainActivity2 : AppCompatActivity() {
         val txttotal2 = findViewById<EditText>(R.id.inpTotalTwo)
         txttotal2.setInputType(InputType.TYPE_NULL);
 
-        val subTotal = txteditSubTotal.text.toInt()*0.12
-        //val resultado =
-
-
-
-
         txteditSubTotal.addTextChangedListener(object : TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
@@ -58,9 +55,35 @@ class MainActivity2 : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 txttotal.setText(s.toString())
                 txttotal2.setText(s.toString())
+                valueSubtotal = s.toString().toInt()
+                if(boolIva)
+                {
+                    valueIva = GetPorcentage(s.toString().toInt(), 12)
+                    operation = s.toString().toInt() + valueIva.toString().toInt()
+                    txtiva.setText(valueIva.toString())
+                    txttotal.setText(operation.toString())
+                }else
+                {
+                    valueIva = 0;
+                    operation = s.toString().toInt() + valueIva.toString().toInt()
+                    txttotal.setText(operation.toString())
+                }
+
             }
 
             override fun afterTextChanged(s: Editable?) {
+                valueSubtotal = s.toString().toInt()
+                if(boolIva)
+                {   valueIva = GetPorcentage(s.toString().toInt(), 12)
+                    operation = s.toString().toInt() + valueIva.toString().toInt()
+                    txtiva.setText(valueIva.toString())
+                    txttotal.setText(operation.toString())
+                }else
+                {
+                    valueIva = 0;
+                    operation = s.toString().toInt() + valueIva.toString().toInt()
+                    txttotal.setText(operation.toString())
+                }
             }
 
         })
@@ -74,7 +97,14 @@ class MainActivity2 : AppCompatActivity() {
             ) {
                 when(position){
                     0 -> {
-                        txtiva.setText("$subTotal")
+                        boolIva = false;
+                        txtiva.setText("0")
+                        txttotal.setText(valueSubtotal.toString())
+                    }
+                    1 -> {
+                        boolIva = true;
+                        txtiva.setText(GetPorcentage(valueSubtotal.toString().toInt(), 12).toString())
+                        txttotal.setText((valueSubtotal.toString().toInt() + GetPorcentage(valueSubtotal.toString().toInt(), 12)).toString() )
                     }
 
                 }
@@ -82,7 +112,67 @@ class MainActivity2 : AppCompatActivity() {
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
+
         })
+
+        feedbacktypeCont.setOnItemSelectedListener(object : OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                when(position){
+                    0 -> {
+                        imprent.setText("0%")
+                        impiva.setText("0%")
+                    }
+                    1 -> {
+                        imprent.setText("2%")
+                        impiva.setText("0%")
+                    }
+                    2 -> {
+                        imprent.setText("2%")
+                        impiva.setText("10%")
+                    }
+                    3 -> {
+                        imprent.setText("2%")
+                        impiva.setText("20%")
+                    }
+                    4 -> {
+                        imprent.setText("2%")
+                        impiva.setText("30%")
+                    }
+                    5 -> {
+                        imprent.setText("2%")
+                        impiva.setText("70%")
+                    }
+
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+
+        })
+
+    }
+
+    fun ConvertToInt(texto:String):Int
+    {
+        try {
+            return Integer.parseInt(texto)
+        } catch (e: Exception) {
+            return 0;
+        }
+    }
+
+    fun GetPorcentage(firstNumber: Int, secondNumber: Int):Int
+    {
+        try {
+            return (firstNumber * secondNumber / 100)
+        } catch (e: Exception) {
+            return 0;
+        }
     }
 }
-

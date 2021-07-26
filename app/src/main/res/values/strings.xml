@@ -5,8 +5,8 @@
     <string name="txtSubTotal">SubTotal</string>
     <string name="inpSubTotal"></string>
     <string name="txtGraIva">¿graba iva?</string>
-    <string name="Si">Si</string>
     <string name="No">No</string>
+    <string name="Si">Si</string>
     <string name="txtTotal">Total</string>
     <string name="txtComi">COMISIÓN</string>
     <string name="txtCard">Tarjeta</string>

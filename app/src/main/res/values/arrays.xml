@@ -3,8 +3,8 @@
 <resources>
 
     <string-array name="SpinGraIva">
-        <item>@string/Si</item>
         <item>@string/No</item>
+        <item>@string/Si</item>
     </string-array>
 
     <string-array name="spinCard">
