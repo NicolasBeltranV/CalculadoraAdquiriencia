@@ -8,6 +8,7 @@
     </string-array>
 
     <string-array name="spinCard">
+        <item>@string/empty</item>
         <item>@string/cred</item>
         <item>@string/deb</item>
     </string-array>

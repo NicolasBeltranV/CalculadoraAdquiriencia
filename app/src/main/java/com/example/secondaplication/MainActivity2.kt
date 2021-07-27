@@ -23,7 +23,8 @@ class MainActivity2 : AppCompatActivity() {
         var valueIva = 0;
         var operation = 0;
         var resultComi=0.0;
-
+        var contenTotal2=0;
+       // var creditValidation = 0.0;
 
         val feedbacktype = findViewById<Spinner>(R.id.spinnerId)
         val spinnerOptions = feedbacktype.getSelectedItem().toString()
@@ -32,6 +33,7 @@ class MainActivity2 : AppCompatActivity() {
         txtiva.setInputType(InputType.TYPE_NULL);
 
         val txttotal = findViewById<EditText>(R.id.inpTotal)
+        var total = 0;
         txttotal.setInputType(InputType.TYPE_NULL);
 
         val commision = findViewById<Spinner>(R.id.spinCard)
@@ -52,40 +54,67 @@ class MainActivity2 : AppCompatActivity() {
 
         txteditSubTotal.addTextChangedListener(object : TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 txttotal.setText(s.toString())
-                txttotal2.setText(s.toString())
-                valueSubtotal = s.toString().toInt()
+
+                commision.setSelection(0)
+                feedbacktypeCont.setSelection(0)
+                feedbacktype.setSelection(0)
+
+                if(s.toString().trim().length <= 0)
+                {
+                    valueSubtotal = 0
+                }else{
+                    valueSubtotal = s.toString().toInt()
+                }
+
                 if(boolIva)
                 {
                     valueIva = GetPorcentage(s.toString().toInt(), 12)
-                    operation = s.toString().toInt() + valueIva.toString().toInt()
+                    operation = valueSubtotal + valueIva.toString().toInt()
                     txtiva.setText(valueIva.toString())
                     txttotal.setText(operation.toString())
+                    txttotal2.setText(operation.toString())
                 }else
                 {
                     valueIva = 0;
-                    operation = s.toString().toInt() + valueIva.toString().toInt()
+                    operation = valueSubtotal - valueIva.toString().toInt()
                     txttotal.setText(operation.toString())
+                    txttotal2.setText(txttotal.text.toString())
+
                 }
 
             }
 
             override fun afterTextChanged(s: Editable?) {
-                valueSubtotal = s.toString().toInt()
+
+                if(s.toString().trim().length <= 0)
+                {
+                    valueSubtotal = 0
+                }else{
+                    valueSubtotal = s.toString().toInt()
+                }
+
                 if(boolIva)
                 {   valueIva = GetPorcentage(s.toString().toInt(), 12)
-                    operation = s.toString().toInt() + valueIva.toString().toInt()
+                    operation = valueSubtotal + valueIva.toString().toInt()
                     txtiva.setText(valueIva.toString())
                     txttotal.setText(operation.toString())
+                    total = operation.toString().toInt()
+                    txttotal2.setText(total.toString())
                 }else
                 {
                     valueIva = 0;
-                    operation = s.toString().toInt() + valueIva.toString().toInt()
+                    operation = valueSubtotal + valueIva.toString().toInt()
                     txttotal.setText(operation.toString())
+                    total = operation.toString().toInt()
+
                 }
+
+
             }
 
         })
@@ -102,11 +131,13 @@ class MainActivity2 : AppCompatActivity() {
                         boolIva = false;
                         txtiva.setText("0")
                         txttotal.setText(valueSubtotal.toString())
+                        txttotal2.setText(total.toString())
                     }
                     1 -> {
                         boolIva = true;
                         txtiva.setText(GetPorcentage(valueSubtotal.toString().toInt(), 12).toString())
                         txttotal.setText((valueSubtotal.toString().toInt() + GetPorcentage(valueSubtotal.toString().toInt(), 12)).toString() )
+                        txttotal2.setText((valueSubtotal.toString().toInt() + GetPorcentage(valueSubtotal.toString().toInt(), 12)).toString() )
                     }
 
                 }
@@ -125,16 +156,23 @@ class MainActivity2 : AppCompatActivity() {
             ) {
                 when(position){
                     0 -> {
-                        var itemOne = GetPorcentageDec(valueSubtotal.toString().toInt(),4.5.toDouble())
-                        resultComi = valueSubtotal-itemOne
-                        txttotal2.setText(resultComi.toString())
+                        resultComi= total - 0.0
+                        txttotal2.setText(total.toString())
+                        //creditValidation = 0.0
                     }
                     1 -> {
-                        var itemTwo = GetPorcentageDec(valueSubtotal.toString().toInt(),2.25.toDouble())
-                        resultComi= valueSubtotal-itemTwo
+                        var itemOne = GetPorcentageDeci(txttotal.text.toString().toDouble(), 4.5)
+                        resultComi = resta(txttotal.text.toString().toDouble(),itemOne)
                         txttotal2.setText(resultComi.toString())
-                    }
+                        // = 4.5
 
+                    }
+                    2 -> {
+                        var itemTwo = GetPorcentageDeci(txttotal.text.toString().toDouble(),2.25)
+                        resultComi= resta(txttotal.text.toString().toDouble(),itemTwo)
+                        txttotal2.setText(resultComi.toString())
+                        //creditValidation = 2.25
+                    }
                 }
             }
 
@@ -154,40 +192,45 @@ class MainActivity2 : AppCompatActivity() {
                     0 -> {
                         imprent.setText("0%")
                         impiva.setText("0%")
+                        txttotal2.setText(valueSubtotal.toString())
                     }
                     1 -> {
                         imprent.setText("2%")
                         impiva.setText("0%")
-                        var x = GetPorcentage(valueSubtotal,2)
+                        var x = GetPorcentage(total,2)
                         var y = resultComi-x
                         txttotal2.setText(y.toString())
                     }
                     2 -> {
                         imprent.setText("2%")
                         impiva.setText("10%")
-                        var x = GetPorcentage(valueSubtotal,2)
-                        var y = resultComi-x
+                        var x = GetPorcentage(total,2)
+                        var porcentageIva = GetPorcentageDec(txtiva.text.toString().toDouble(),10)
+                        var y = resultComi-x-porcentageIva
                         txttotal2.setText(y.toString())
                     }
                     3 -> {
                         imprent.setText("2%")
                         impiva.setText("20%")
-                        var x = GetPorcentage(valueSubtotal,2)
-                        var y = resultComi-x
+                        var x = GetPorcentage(total,2)
+                        var porcentageIva = GetPorcentageDec(txtiva.text.toString().toDouble(),20)
+                        var y = resultComi-x-porcentageIva
                         txttotal2.setText(y.toString())
                     }
                     4 -> {
                         imprent.setText("2%")
                         impiva.setText("30%")
-                        var x = GetPorcentage(valueSubtotal,2)
-                        var y = resultComi-x
+                        var x = GetPorcentage(total,2)
+                        var porcentageIva = GetPorcentageDec(txtiva.text.toString().toDouble(),30)
+                        var y = Math.round(resultComi-x-porcentageIva)
                         txttotal2.setText(y.toString())
                     }
                     5 -> {
                         imprent.setText("2%")
                         impiva.setText("70%")
-                        var x = GetPorcentage(valueSubtotal,2)
-                        var y = resultComi-x
+                        var x = GetPorcentage(total,2)
+                        var porcentageIva = GetPorcentageDec(txtiva.text.toString().toDouble(),70)
+                        var y = Math.round(resultComi-x-porcentageIva)
                         txttotal2.setText(y.toString())
                     }
 
@@ -209,6 +252,14 @@ class MainActivity2 : AppCompatActivity() {
             return 0;
         }
     }
+    fun CreditValidationC(subtotal:Int, p: Double):Double
+    {
+        try {
+            return subtotal * p / 100
+        } catch (e: Exception) {
+            return 0.0;
+        }
+    }
 
     fun GetPorcentage(firstNumber: Int, secondNumber:Int):Int
     {
@@ -218,10 +269,25 @@ class MainActivity2 : AppCompatActivity() {
             return 0;
         }
     }
-    fun GetPorcentageDec(firstNumber: Int, secondNumber:Double):Double
+    fun GetPorcentageDec(firstNumber: Double, secondNumber:Int):Double
     {
         try {
             return (firstNumber * secondNumber / 100)
+        } catch (e: Exception) {
+            return 0.0;
+        }
+    }
+    fun GetPorcentageDeci(firstNumber: Double, secondNumber:Double):Double
+    {
+        try {
+            return (firstNumber * secondNumber / 100)
+        } catch (e: Exception) {
+            return 0.0;
+        }
+    }
+    fun resta(firstNumber: Double,secondNumber: Double):Double {
+        try {
+            return (firstNumber - secondNumber)
         } catch (e: Exception) {
             return 0.0;
         }

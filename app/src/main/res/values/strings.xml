@@ -8,6 +8,7 @@
     <string name="No">No</string>
     <string name="Si">Si</string>
     <string name="txtTotal">Total</string>
+    <string name="empty"></string>
     <string name="txtComi">COMISIÓN</string>
     <string name="txtCard">Tarjeta</string>
     <string name="cred">Credito(4.5%)</string>
