@@ -11,7 +11,6 @@ import android.widget.EditText
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import java.text.DecimalFormat
-import kotlin.math.truncate
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -49,12 +48,15 @@ class MainActivity2 : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 txttotal.setText(s.toString())
 
-                commision.setSelection(0)
-                feedbacktypeCont.setSelection(0)
-                feedbacktype.setSelection(0)
+
+
 
                 if(s.toString().trim().isEmpty())
                 {
+                    commision.setSelection(0)
+                    feedbacktypeCont.setSelection(0)
+                    feedbacktype.setSelection(0)
+
                     valueSubtotal = 0
                 }else{
                     valueSubtotal = s.toString().toInt()
@@ -62,7 +64,7 @@ class MainActivity2 : AppCompatActivity() {
 
                 if(boolIva)
                 {
-                    valueIva = GetPorcentage(s.toString().toInt(), 12)
+                    valueIva = GetPorcentage(valueSubtotal, 12)
                     operation = valueSubtotal + valueIva.toString().toInt()
                     txtiva.setText(valueIva.toString())
                     txttotal.setText(operation.toString())
@@ -88,7 +90,7 @@ class MainActivity2 : AppCompatActivity() {
 
                 if(boolIva)
                 {
-                    valueIva = GetPorcentage(s.toString().toInt(), 12)
+                    valueIva = GetPorcentage(valueSubtotal, 12)
                     operation = valueSubtotal + valueIva.toString().toInt()
                     txtiva.setText(valueIva.toString())
                     txttotal.setText(operation.toString())
@@ -114,12 +116,15 @@ class MainActivity2 : AppCompatActivity() {
                 when(position){
                     0 -> {
                         boolIva = false
+                    }
+                    1 -> {
+                        boolIva = false
                         txtiva.setText("0")
                         txttotal.setText(valueSubtotal.toString())
                         txttotal2.setText(total.toString())
                         total = txttotal.text.toString().toDouble();
                     }
-                    1 -> {
+                    2 -> {
                         boolIva = true
                         txtiva.setText(GetPorcentage(valueSubtotal.toString().toInt(), 12).toString())
                         txttotal.setText((valueSubtotal.toString().toInt() + GetPorcentage(valueSubtotal.toString().toInt(), 12)).toString() )
@@ -144,6 +149,7 @@ class MainActivity2 : AppCompatActivity() {
             ) {
                 when(position){
                     0 -> {
+                        resultCommision = 0.0
                         commisionTarjeta = total - 0.0
                         txttotal2.setText(total.toString())
                     }
@@ -151,13 +157,13 @@ class MainActivity2 : AppCompatActivity() {
                         resultCommision = GetPorcentageDeci(txttotal.text.toString().toDouble(), 4.5)
                         commisionTarjeta = resta(txttotal.text.toString().toDouble(),resultCommision)
                         txttotal2.setText(commisionTarjeta.toString())
-                        //println(resultCommision)
+                        println(resultCommision)
                     }
                     2 -> {
                         resultCommision = GetPorcentageDeci(txttotal.text.toString().toDouble(),2.24)
                         commisionTarjeta= resta(txttotal.text.toString().toDouble(),resultCommision)
                         txttotal2.setText(commisionTarjeta.toString())
-                        //println(resultCommision)
+                        println(resultCommision)
                     }
                 }
 
@@ -177,60 +183,67 @@ class MainActivity2 : AppCompatActivity() {
             ) {
                 when(position){
                     0 -> {
-                        imprent.setText("0%")
-                        impiva.setText("0%")
-                        txttotal2.setText(valueSubtotal.toString())
+                        imprent.setText("")
+                        impiva.setText("")
+                        txttotal2.setText("0")
                     }
                     1 -> {
+                        imprent.setText("0%")
+                        impiva.setText("0%")
+                        val df = DecimalFormat("#.##")
+                        val op = total-resultCommision
+                        txttotal2.setText(df.format(op))
+                        println(op)
+                    }
+                    2 -> {
                         imprent.setText("2%")
                         impiva.setText("0%")
                         var retentionSubtotal = GetPorcentage(valueSubtotal.toString().toInt() ,2)
                         var sumRetentions = resultCommision + retentionSubtotal
                         var totalComm = total - sumRetentions
-                        txttotal2.setText(DecimalFormat(totalComm.toInt().toString()).toString())
-
-                        println(valueSubtotal.toString().toInt())
-                        println(resultCommision)
-                        println(retentionSubtotal)
-                        println(sumRetentions)
-                        println(total)
-                        println(DecimalFormat(totalComm.toString()).toString())
-                    }
-                    2 -> {
-                        imprent.setText("2%")
-                        impiva.setText("10%")
-                        var retentionSubtotal = GetPorcentage(valueSubtotal,2)
-                        var porcentageIva = GetPorcentage(valueSubtotal.toString().toInt(),10)
-                        var sumRetentions = resultCommision+retentionSubtotal+porcentageIva
-                        var totalComm = total - sumRetentions
-                        txttotal2.setText(totalComm.toString())
+                        val df = DecimalFormat("#.##")
+                        txttotal2.setText(df.format(totalComm))
                     }
                     3 -> {
                         imprent.setText("2%")
-                        impiva.setText("20%")
+                        impiva.setText("10%")
                         var retentionSubtotal = GetPorcentage(valueSubtotal,2)
-                        var porcentageIva = GetPorcentage(valueSubtotal.toString().toInt(),20)
-                        var sumRetentions = resultCommision+retentionSubtotal+porcentageIva
+                        var resultIva = GetPorcentageDec(txtiva.text.toString().toDouble(),10)
+                        var sumRetentions = resultCommision+retentionSubtotal+resultIva
                         var totalComm = total - sumRetentions
-                        txttotal2.setText(totalComm.toString())
+                        val df = DecimalFormat("#.##")
+                        txttotal2.setText(df.format(totalComm))
+
                     }
                     4 -> {
                         imprent.setText("2%")
-                        impiva.setText("30%")
+                        impiva.setText("20%")
                         var retentionSubtotal = GetPorcentage(valueSubtotal,2)
-                        var porcentageIva = GetPorcentage(valueSubtotal.toString().toInt(),30)
+                        var porcentageIva = GetPorcentageDec(txtiva.text.toString().toDouble(),20)
                         var sumRetentions = resultCommision+retentionSubtotal+porcentageIva
                         var totalComm = total - sumRetentions
-                        txttotal2.setText(totalComm.toString())
+                        val df = DecimalFormat("#.##")
+                        txttotal2.setText(df.format(totalComm))
                     }
                     5 -> {
                         imprent.setText("2%")
-                        impiva.setText("70%")
+                        impiva.setText("30%")
                         var retentionSubtotal = GetPorcentage(valueSubtotal,2)
-                        var porcentageIva = GetPorcentage(valueSubtotal.toString().toInt(),70)
+                        var porcentageIva = GetPorcentageDec(txtiva.text.toString().toDouble(),30)
                         var sumRetentions = resultCommision+retentionSubtotal+porcentageIva
                         var totalComm = total - sumRetentions
-                        txttotal2.setText(totalComm.toString())
+                        val df = DecimalFormat("#.##")
+                        txttotal2.setText(df.format(totalComm))
+                    }
+                    6 -> {
+                        imprent.setText("2%")
+                        impiva.setText("70%")
+                        var retentionSubtotal = GetPorcentage(valueSubtotal,2)
+                        var porcentageIva = GetPorcentageDec(txtiva.text.toString().toDouble(),70)
+                        var sumRetentions = resultCommision+retentionSubtotal+porcentageIva
+                        var totalComm = total - sumRetentions
+                        val df = DecimalFormat("#.##")
+                        txttotal2.setText(df.format(totalComm))
                     }
 
                 }
